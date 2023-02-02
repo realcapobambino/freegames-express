@@ -1,39 +1,36 @@
 const express = require('express')
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const { json } = require('body-parser');
 const router = express.Router()
+
 
 const axios = require('axios').default;
 
 
 // create application/json parser
-var jsonParser = bodyParser.json()
+const jsonParser = bodyParser.json({ type: 'application/json' })
+
 
 router
-    .get("/", jsonParser, (req, res) => {
+    .get("/", jsonParser, async (req, res) => {
+
+        //define api url
+        const url = "https://www.freetogame.com/api/games"
+
+        try {
+            data = await axios.get(url)
+            games = data.data
+
+        }
+        // catch errors
+        catch (error) {
+            console.log(error)
+        }
+        // console.log(games.data)
 
 
-
-        res.render('games/index')
-
+        // render games page with data
+        res.render("games", { games: games })
     })
-    .get("/", (req, res) => {
-        const url = 'https://www.freetogame.com/api/games?id=452'
-        axios.get(url)
-            .then(function (response) {
-
-                games = JSON.stringify(response.data)
-                console.log(games)
-            })
-            .catch(function (error) {
-                console.log(error)
-            })
-
-
-        // console.log(JSON.stringify(response))
-
-        res.send(games)
-
-    })
-
 
 module.exports = router
