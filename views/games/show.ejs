@@ -1,0 +1,30 @@
+<%-include("../partials/header")-%>
+<%-include("../partials/navbar")-%>
+
+<div class="p-2 m-2">
+
+    <h1 class="text-purple-700 font-extrabold text-center font-bold font-mono  text-4xl p-2 m-2"><%=game.title %></h1>
+
+    <div class="flex justify-center container">
+        <div class="flex flex-col md:flex-row rounded-lg bg-white shadow-lg">
+            <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+                src="<%= game.thumbnail %> " alt="" />
+            <div class="p-6 flex flex-col justify-start">
+                <h5 class="text-gray-900 text-xl font-medium mb-2">Genre :<%= game.genre %></h5>
+                <p class="text-gray-700 text-base mb-4">Publisher:
+                    <%= game.publisher %>
+                </p>
+                <p class="text-gray-700 text-base mb-4">Developer:
+                    <%= game.developer %>
+                </p>
+                <p class="text-gray-600 text-xs">Platform: <%= game.platform %></p>
+                <p class="text-gray-700 text-base mb-4">Description:
+                    <%= game.description %>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<%-include("../partials/footer")-%>

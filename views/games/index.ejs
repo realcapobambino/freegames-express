@@ -1,12 +1,8 @@
 <%-include("../partials/header")-%>
 <%-include("../partials/navbar")-%>
 
-
 <div>
     <h1 class="text-purple-700 font-extrabold text-center font-bold font-mono  text-4xl p-2 m-2">List of All Games</h1>
-
-
-
     <div class="container mx-auto text-center">
         <div class="flex flex-wrap">
             <% games.forEach(game => { %>
@@ -19,8 +15,8 @@
                     <p class="text-gray-700 text-base mb-4">
                         <%= game.short_description %>
                     </p>
-                    <button type="button"
-                        class=" inline-block px-6 py-2.5 bg-purple-500 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-purple-800 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Details</button>
+                    <a href="/games/<%= game.id %>" role="button"
+                        class=" inline-block px-6 py-2.5 bg-purple-500 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-purple-800 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Details</a>
                     <div class="p-2 m-2">
                         <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
                             <%= game.platform %>
@@ -31,11 +27,5 @@
             <% }) %>
         </div>
     </div>
-
-
-
-
 </div>
-
-
 <%-include("../partials/footer")-%>
