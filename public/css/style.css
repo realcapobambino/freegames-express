@@ -708,24 +708,6 @@ video {
 .navbar-dark .navbar-nav .nav-link.active {
   color: #fff;
 }
-.modal.show .modal-dialog {
-  transform: none;
-}
-.modal-backdrop.show {
-  opacity: 0.5;
-}
-.tooltip.show {
-  opacity: 1;
-}
-.offcanvas-backdrop.show {
-  opacity: 0.5;
-}
-.offcanvas.show {
-  transform: none;
-}
-.timepicker-modal .fade.show {
-  opacity: 1;
-}
 .collapse {
   visibility: visible !important;
 }
@@ -2014,10 +1996,6 @@ video {
 
   .md\:w-48 {
     width: 12rem;
-  }
-
-  .md\:max-w-xl {
-    max-width: 36rem;
   }
 
   .md\:grid-cols-2 {
