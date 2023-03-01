@@ -1,9 +1,10 @@
 # Free to Play Games based on freetogame.com
 
 # To do:
-#   pagination
-#   accounts
 
+# pagination
+
+# accounts
 
 # To run the web app,
 
@@ -11,7 +12,7 @@
 
     npm i -g nodemon
 
-    npm install 
+    npm install
 
 # Then run the following:
 
@@ -20,4 +21,3 @@
     npm run dev
 
 #
-

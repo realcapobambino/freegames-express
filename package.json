@@ -1,28 +1,28 @@
 {
-	"name": "tailwind-with-ejs",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"devcss": "postcss src/css/tailwind.css -o public/css/style.css -w",
-		"dev": " nodemon index.js"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"autoprefixer": "^10.4.7",
-		"axios": "^1.2.6",
-		"body-parser": "^1.20.1",
-		"ejs": "^3.1.8",
-		"express": "^4.18.1",
-		"postcss": "^8.4.14",
-		"tailwindcss": "^3.1.5",
-		"tw-elements": "^1.0.0-alpha13"
-	},
-	"devDependencies": {
-		"postcss-cli": "^10.0.0",
-		"prettier": "^2.8.3",
-		"prettier-plugin-tailwindcss": "^0.2.2"
-	}
+  "name": "tailwind-with-ejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devcss": "postcss src/css/tailwind.css -o public/css/style.css -w",
+    "dev": " nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "axios": "^1.2.6",
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.5",
+    "tw-elements": "^1.0.0-alpha13"
+  },
+  "devDependencies": {
+    "postcss-cli": "^10.0.0",
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.3"
+  }
 }
