@@ -1,38 +1,68 @@
 <%-include("../partials/header")-%>
 
-<body>
-    <%-include("../partials/navbar")-%>
-    <div>
-        <h1 class="p-2 m-2 font-mono text-4xl font-bold text-center text-purple-700">List of All Games</h1>
-        <div class="container px-4 mx-auto text-center">
-            <div class="flex flex-wrap">
-                <% games.slice(0, 8).forEach(game => { %>
-                <div class="flex-none w-1/4 p-2 m-2 bg-white rounded-lg shadow-lg">
-                    <a href="#!">
-                        <img class="rounded-t-lg" src="<%= game.thumbnail%>" alt="game image" loading="lazy" />
-                    </a>
-                    <div class="p-6">
-                        <h5 class="mb-2 text-xl font-medium text-gray-900"><%= game.title %> </h5>
-                        <p class="mb-4 text-base text-gray-700">
-                            <%= game.short_description %>
-                        </p>
-                        <a href="/games/<%= game.id %>" role="button"
-                            class=" inline-block px-6 py-2.5 bg-purple-500 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-purple-800 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Details</a>
-                        <div class="p-2 m-2">
-                            <div class="px-6 py-3 text-gray-600 border-t border-gray-300">
-                                <%= game.platform %>
+<body">
+    <div class="overflow-hidden bg-gray-300 dark:bg-gray-800">
+        <%-include("../partials/nav")-%>
+        <div>
+            <h1 class="justify-center p-2 m-2 font-mono text-4xl font-bold text-center text-sky-700">List of All Games
+            </h1>
+            <div class="flex flex-col items-center justify-center gap-2">
+                <div class="flex flex-wrap items-center justify-center">
+                    <% games.slice(0, 8).forEach(game => { %>
+                    <div class="h-full max-w-md m-2 bg-white shadow-lg rounded-xl">
+                        <a href="#">
+                            <img class="min-w-full rounded-lg" src="<%= game.thumbnail%>" alt="game image"
+                                loading="lazy" />
+                        </a>
+                        <div class="p-6">
+                            <h5 class="mb-2 text-xl font-medium text-gray-900"><%= game.title %> </h5>
+                            <p class="mb-4 text-base text-gray-700">
+                                <%= game.short_description %>
+                            </p>
+                            <a href="/games/<%= game.id %>" role="button"
+                                class=" inline-block px-6 py-2.5 bg-purple-500 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-purple-800 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Details</a>
+                            <div class="p-2 m-2">
+                                <div class="px-6 py-3 text-gray-600 border-t border-gray-300">
+                                    <%= game.platform %>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <% }) %>
                 </div>
-                <% }) %>
-
             </div>
+
         </div>
-        <!-- <div class="justify-center p-3 m-3">
-        <a class="p-2 m-2 font-medium text-white bg-purple-500 rounded-lg hover:bg-purple-800 " role="button"> LOAD
-            MORE </button>
-    </div> -->
+        <%-include("../partials/footer")-%>
     </div>
-    <%-include("../partials/footer")-%>
-</body>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    p'++++++++++++++++++++
