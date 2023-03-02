@@ -4,7 +4,11 @@ module.exports = {
   mode: "jit",
   darkMode: "class", // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'rubik': ['Rubik Iso', 'cursive'],
+      }
+    },
   },
   plugins: [require("tw-elements/dist/plugin")],
 };
