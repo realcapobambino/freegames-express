@@ -1,30 +1,54 @@
-<!--  -->
+<!-- Dark Mode Hovering Button  -->
+
+<div class="fixed bottom-0 z-30 m-4 group light-switch">
+    <button
+        class="relative flex items-center p-2 text-xl font-medium border border-purple-200 rounded-full text-primary bg-gray-50 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"
+            class="h-9">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+            </path>
+        </svg><span class="absolute top-0 flex w-4 h-4 -right-1"><span
+                class="absolute inline-flex w-4 h-4 bg-blue-400 rounded-full opacity-75 animate-ping dark:bg-gray-300"></span><span
+                class="w-4 h-4 bg-blue-400 rounded-full dark:bg-gray-300"></span></span><small
+            class="hidden group-hover:block"> Toggle Dark Mode </small>
+    </button>
+</div>
 
 <!--  -->
 
-<nav class="relative top-0 left-0 w-full bg-white shadow">
-    <div class="container flex items-center justify-between m-auto text-gray-700">
-        <h1 class="py-4 pl-8 text-xl font-bold">Gaming Freebees!!</h1>
-        <ul class="items-center hidden pr-5 text-base font-semibold cursor-pointer md:flex">
-            <li class="px-6 py-4 hover:bg-gray-200">Home</li>
-            <li class="px-6 py-4 hover:bg-gray-200">Contact</li>
-            <li class="px-6 py-4 hover:bg-gray-200">Services</li>
-            <li class="px-6 py-4 hover:bg-gray-200">About</li>
-        </ul>
-        <button class="block px-4 py-3 mx-2 rounded md:hidden focus:outline-none hover:bg-gray-200 group">
-            <div class="w-5 h-1 mb-1 bg-gray-600"></div>
-            <div class="w-5 h-1 mb-1 bg-gray-600"></div>
-            <div class="w-5 h-1 bg-gray-600"></div>
-            <div class="absolute top-0 w-8/12 h-screen bg-white border -right-full">
-                <ul class="flex flex-col items-center w-full pt-10 text-base cursor-pointer">
-                    <li class="w-full px-6 py-4 hover:bg-gray-200">Home</li>
-                    <li class="w-full px-6 py-4 hover:bg-gray-200">Contact</li>
-                    <li class="w-full px-6 py-4 hover:bg-gray-200">Services</li>
-                    <li class="w-full px-6 py-4 hover:bg-gray-200">About</li>
-                </ul>
-
+<nav class="relative top-0 left-0 w-full bg-gray-300 dark:bg-gray-800">
+    <div class="flex">
+        <h1 class="py-4 pl-8 text-xl font-bold">Gamers' Haven</h1>
+        <div class="container flex items-center justify-end m-auto text-gray-700 dark:text-gray-200">
+            <ul class="items-center hidden pr-5 text-base font-semibold cursor-pointer md:flex">
+                <li class="px-6 py-4 hover:bg-gray-200"><a href="/">Home</a></li>
+                <li class="px-6 py-4 hover:bg-gray-200"><a href="/games">Games</a></li>
+                <li class="px-6 py-4 hover:bg-gray-200"><a href="/">About</a></li>
+            </ul>
+            <div class="hidden p-2">
+                <div class="cursor-pointer fa-regular fa-sun sun"></div>
+                <div class="cursor-pointer fa-regular fa-moon moon"></div>
             </div>
-        </button>
+            <button class="block px-4 py-3 mx-2 rounded group hover:bg-gray-200 focus:outline-none md:hidden">
+                <div class="w-5 h-1 mb-1 bg-gray-600"></div>
+                <div class="w-5 h-1 mb-1 bg-gray-600"></div>
+                <div class="w-5 h-1 bg-gray-600"></div>
+                <div
+                    class="absolute top-0 w-2/5 transition-all duration-300 bg-gray-300 border opacity-0 -right-full h-fit group-focus:right-0 group-focus:opacity-100 dark:bg-gray-800">
+                    <ul class="flex flex-col items-center w-full pt-10 text-base cursor-pointer">
+                        <li class="w-full px-6 py-4 hover:bg-gray-200">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="w-full px-6 py-4 hover:bg-gray-200">
+                            <a href="/games">Games</a>
+                        </li>
+                        <li class="w-full px-6 py-4 hover:bg-gray-200">
+                            <a href="/">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </button>
+        </div>
     </div>
-
 </nav>
