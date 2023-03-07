@@ -25,6 +25,6 @@ app.get("/", (req, res) => {
 app.use("/games", gamesRouter);
 
 // server listening
-app.listen(PORT, '192.168.100.33', () => {
+app.listen(PORT, () => {
   console.log(`The app start on http://localhost:${PORT}`);
 });
